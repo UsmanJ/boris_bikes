@@ -1,19 +1,19 @@
 class Bike
 
 	def initialize
-		@bike_working = true
+		@working = true
 	end
 
 	def working?
-		@bike_working
-	end
-
-	def broken?
-		@bike_working = false
+		@working
 	end
 
 	def report_broken
-		
+		@working = false
+		return nil
 	end
 
+	def broken?
+		!@working
+	end
 end
